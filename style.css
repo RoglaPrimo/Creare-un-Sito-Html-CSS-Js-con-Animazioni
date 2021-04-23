@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, p
 .big-text
 {
     font-size: 70px;
+    font-weight: 900;
 }
 
 .med-text
@@ -65,7 +66,6 @@ h1, h2, h3, h4, h5, p
     left: 0;
     padding: 30px;
     display: flex;
-    background: #000;
 }
 
 .logo
@@ -93,4 +93,20 @@ h1, h2, h3, h4, h5, p
 .cta
 {
     
+}
+
+/* Hero */
+.hero
+{
+    height: 600px;
+    display: flex; width: 100%; align-items: center;
+    background: url('bg-video.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero__content
+{
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
 }
