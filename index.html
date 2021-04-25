@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css" integrity="sha512-BiFZ6oflftBIwm6lYCQtQ5DIRQ6tm02svznor2GYQOfAlT3pnVJ10xCrU3XuXnUrWQ4EG8GKxntXnYEdKY0Ugg==" crossorigin="anonymous" />
     
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 
 </head>
@@ -40,21 +42,26 @@
     </div>
 
     <div class="hero">
-        <div class="hero__content">
+        <div class="hero__content reveal">
             <p class="intro-text">Intro Text</p>
             <h1 class="big-text">Titolo della mia Pagina Web</h1>
             <a href="" class="button">Discover More</a>
         </div>
+
+        <video autoplay muted loop id="video-back">
+            <source src="video-back.mp4" type="video/mp4">
+        </video>
+
     </div>
 
 
 
 
     <div class="poster mt-3">
-        <div class="poster__img">
+        <div class="poster__img reveal">
             <img src="bg-video.jpg" alt="">
         </div>
-        <div class="poster__content">
+        <div class="poster__content reveal">
             <h3 class="big-text">Titolo della mia poster</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quos, dolore reiciendis sequi eos et quaerat ipsa. Distinctio dignissimos, consequuntur, modi delectus assumenda officia maxime asperiores temporibus minima natus mollitia?</p>
             <a href="" class="button"> Call to action</a>
@@ -64,10 +71,10 @@
 
 
     <div class="bg-cover mt-3">
-        <div class="bg-cover__title">
+        <div class="bg-cover__title reveal">
             <h3 class="big-text tw">Titolo del mio blocco cover</h3>
         </div>
-        <div class="bg-cover__text">
+        <div class="bg-cover__text reveal">
 
             <h4 class="normal-text tw">Titolo del mio paragrafo</h4>
             <p class="tw">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia temporibus sed quas tenetur a. Unde et incidunt, voluptatum, iste quis voluptates, iure illum quae tempora quod vitae repudiandae ab minus?</p>
@@ -85,35 +92,59 @@
 
 
     <div class="grid mt-3">
-        <div class="col">
+        <div class="col reveal">
             <h3 class="big-text">Lorem ipsum <br> sia maet</h3>
         </div>
-        <div class="col">
-            <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aperiam, quasi aspernatur ratione fugit ex in, accusantium sint distinctio, dolores iure? Exercitationem saepe odio, architecto blanditiis voluptatibus accusamus facere nulla!</p>
+        <div class="col reveal">
+            <p class="mt-2 mt-sma-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aperiam, quasi aspernatur ratione fugit ex in, accusantium sint distinctio, dolores iure? Exercitationem saepe odio, architecto blanditiis voluptatibus accusamus facere nulla!</p>
         </div>
     </div>
 
 
 
     <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-        <div class="carousel-cell">  Text </div>
-        <div class="carousel-cell">  Text </div>
-        <div class="carousel-cell">  Text </div>
-        <div class="carousel-cell">  Text </div>
-        <div class="carousel-cell">  Text </div>
-        <div class="carousel-cell">  Text </div>
+        <div class="carousel-cell">
+            <div class="carousel-cell__content zoom">
+                text
+            </div>
+        </div>
+        <div class="carousel-cell">
+            <div class="carousel-cell__content zoom">
+                text
+            </div>
+        </div>
+        <div class="carousel-cell">
+            <div class="carousel-cell__content zoom">
+                text
+            </div>
+        </div>
+        <div class="carousel-cell">
+            <div class="carousel-cell__content zoom">
+                text
+            </div>
+        </div>
+        <div class="carousel-cell">
+            <div class="carousel-cell__content">
+                text
+            </div>
+        </div>
+        <div class="carousel-cell">
+            <div class="carousel-cell__content">
+                text
+            </div>
+        </div>
       </div>
 
 
     <div class="poster mt-3">
         
-        <div class="poster__content">
+        <div class="poster__content reveal">
             <h3 class="big-text">Titolo della mia poster</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo quos, dolore reiciendis sequi eos et quaerat ipsa. Distinctio dignissimos, consequuntur, modi delectus assumenda officia maxime asperiores temporibus minima natus mollitia?</p>
             <a href="" class="button"> Call to action</a>
         </div>
 
-        <div class="poster__img">
+        <div class="poster__img reveal">
             <img src="bg-video.jpg" alt="">
         </div>
 
@@ -126,18 +157,18 @@
 
       <div class="grid">
           <div class="col panel-blue__dots">
-            <div class="dot"> text </div>
-            <div class="dot"> text </div>
-            <div class="dot"> text </div>
-            <div class="dot"> text </div>
+            <div class="dot zoom"> text </div>
+            <div class="dot zoom"> text </div>
+            <div class="dot zoom"> text </div>
+            <div class="dot zoom"> text </div>
           </div>
           <div class="col panel-blue__text">
             <div class="grid">
-                <div class="col">
+                <div class="col reveal">
                     <h3 class="big-text tw">Lorem ipsum</h3>
                 </div>
-                <div class="col">
-                    <p class="tw mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, perferendis deserunt. Beatae nihil, culpa quis nam dolorum sit asperiores in repellat iure fuga eaque totam tempore possimus quae. Consequatur, soluta?</p>
+                <div class="col reveal">
+                    <p class="tw mt-2 mt-sma-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, perferendis deserunt. Beatae nihil, culpa quis nam dolorum sit asperiores in repellat iure fuga eaque totam tempore possimus quae. Consequatur, soluta?</p>
                 </div>
             </div>
           </div>
@@ -149,19 +180,19 @@
 <footer class="footer">
 
     <div class="grid">
-        <div class="col">
+        <div class="col reveal">
             <h4 class="normal-text tw">Lorem ipsum</h4>
             <p>Lorem ipsum aia sgiuhfwhfb</p>
         </div>
-        <div class="col">
+        <div class="col reveal">
             <h4 class="normal-text tw">Lorem ipsum</h4>
             <p>Lorem ipsum aia sgiuhfwhfb</p>
         </div>
-        <div class="col">
+        <div class="col reveal">
             <h4 class="normal-text tw">Lorem ipsum</h4>
             <p>Lorem ipsum aia sgiuhfwhfb</p>
         </div>
-        <div class="col">
+        <div class="col reveal">
             <h4 class="normal-text tw">Lorem ipsum</h4>
             <p>Lorem ipsum aia sgiuhfwhfb</p>
         </div>
@@ -198,6 +229,11 @@
         });
 
     });
+
+    ScrollReveal().reveal('.reveal', { distance: '100px', duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 600 });
+
+    ScrollReveal().reveal('.zoom', { duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 200, scale: 0.65, mobile: false });
+
 </script>
 
 </body>

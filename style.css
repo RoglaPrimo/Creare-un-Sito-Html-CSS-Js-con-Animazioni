@@ -32,6 +32,7 @@ p {line-height: 28px; color: #666; font-weight: 300;}
 {
     width: 100%;
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -42,7 +43,12 @@ p {line-height: 28px; color: #666; font-weight: 300;}
 
 .logo {z-index: 1;}
 
-.menu {width: 100%; z-index: 0;}
+.menu
+{
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+    width: 100%;
+    z-index: 0;
+}
 
 .menu li {display: inline-block;}
 
@@ -82,10 +88,25 @@ p {line-height: 28px; color: #666; font-weight: 300;}
 /* Hero */
 .hero
 {
+    position: relative;
     height: 100vh;
     display: flex; width: 100%; align-items: center;
     background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.9)), url('bg-video.jpg') no-repeat center center;
     background-size: cover;
+    overflow: hidden;
+}
+
+.hero:after
+{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
 }
 
 .hero__content
@@ -94,10 +115,23 @@ p {line-height: 28px; color: #666; font-weight: 300;}
     max-width: 1350px;
     margin: 0 auto;
     padding: 30px;
+    z-index: 1;
+    position: relative;
 }
 
 .hero__content h1,
 .hero__content p {color: #fff;}
+
+
+#video-back
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
 
 /* Poster */
 .poster 
@@ -162,20 +196,23 @@ p {line-height: 28px; color: #666; font-weight: 300;}
 /* Carousel */
 
 .main-carousel {padding: 40px 0;}
+
 .carousel-cell
 {
     height: 350px; 
     width: 350px;
+    margin-right: 40px;
+}
+
+.carousel-cell__content
+{
+    width: 100%;
+    height: 100%;
     background: #6adf91;
     border-radius: 100%;
     line-height: 350px;
     text-align: center;
-    margin-right: 40px;
 }
-
-
-
-
 
 
 /* Panel Blue */
@@ -224,3 +261,9 @@ p {line-height: 28px; color: #666; font-weight: 300;}
 .mt-2 {margin-top: 100px;}
 .mt-3 {margin-top: 150px;}
 .tw {color: #fff;}
+
+@media (max-width: 768px)
+{
+    .mt-sma-0 {margin-top: 0;}
+    .mb-sma-0 {margin-bottom: 0;}
+}
